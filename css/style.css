@@ -1,18 +1,42 @@
 
-body{
+html body{
     text-align: center;
 	text-decoration: none;
-	margin: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: lightyellow;
+}
+header{
+    background-color: aliceblue;
+    padding: 10px;
+}
+nav{
+    background-color: blue;
+    color: white;
+    padding: 0;
+}
+footer{
+    background-color: blue;
+    color: white;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 ul{
    list-style: none;
    margin: 0;
    padding: 0; 
-}
-li{
+   display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
 }
 
 a{
+    display: flex;
     display: block; 
     padding: 8px;
     text-align: center;
@@ -29,17 +53,74 @@ a{
 h2{
     text-align: center; 
 }
-nav{
-    background-color: #00a6b3;
-	color: white;
-	padding: 30px 0 30px 0;
+image{
+    margin: 40px 8px;
+ }
+ main{
+     min-height: 100%;
+     position: relative;
+ }
+ .container{
+     min-height: 100%;
+     position: relative;
+     padding-bottom: 60px;
+ }
+ .red:hover{
+    background-color: red;
+ }
+ .orange:hover{
+    background-color: orange;
+ }
+ .yellow:hover{
+    background-color: yellowgreen;
+ }
+ .green:hover{
+    background-color: green;
+ }
+ .front{
+     height: 300px;
+     width: 300px;
+ }
+ .back{
+     display: none;
+     height: 300px;
+     width: 300px;
+     position: relative; 
+}
+.back1{
+    display: none;
+    height: 300px;
+    width: 300px;
+    position: relative; 
 }
 .title{
     text-align: center; 
  }
- .card{
-    
+ .card:hover{
+    cursor: pointer;
  }
-image{
-    margin: 40px 8px;
- }
+.button1{
+    margin-top: 5em;
+    display: none;
+}
+
+.button2{
+    margin-top: 5em;
+    display: none;
+}
+#answer{
+    font-size: 14px;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+#game-over{
+    display: none;
+    font-size: 14px;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
