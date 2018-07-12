@@ -6,23 +6,32 @@ html body{
     padding: 0;
     height: 100%;
     background-color: lightyellow;
+    font-family: 'Domine', serif;
 }
+
 header{
     background-color: aliceblue;
     padding: 10px;
+    font-family: 'Domine', serif;
 }
 nav{
     background-color: blue;
     color: white;
     padding: 0;
+    font-family: 'Domine', serif;
 }
 footer{
     background-color: blue;
     color: white;
     margin: 0;
     bottom: 0;
-    position: absolute;
+    position: relative;
     width: 100%;
+    height: 60px;
+    font-family: 'Domine', serif;
+}
+ol{
+    list-style: none;
 }
 ul{
    list-style: none;
@@ -41,13 +50,18 @@ a{
     text-align: center;
     margin-left: 5em; 
     text-transform: uppercase;
-	font-family: "Raleway";
 	letter-spacing: 1px;
 	color: white;
 	font-weight: 600;
 	font-size: 18px;
 	margin: 0 20px 0 20px;
-	border-bottom: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    font-family: 'Domine', serif;
+    text-decoration:none !important;
+}
+button{
+    font-family: 'Domine', serif;
+    font-size: 15px;
 }
 h2{
     text-align: center; 
@@ -58,6 +72,15 @@ image{
  main{
      min-height: 100%;
      position: relative;
+ }
+ .theory{
+     display: none; 
+ }
+ .rules{
+     display: none;
+ }
+ .history{
+     display: none;
  }
  .container{
      min-height: 100%;
@@ -76,6 +99,7 @@ image{
  .green:hover{
     background-color: green;
  }
+
  .front{
      height: 300px;
      width: 300px;
@@ -85,6 +109,9 @@ image{
      height: 300px;
      width: 300px;
      position: relative; 
+}
+.developers{
+    display: none;
 }
 .back1{
     display: none;
@@ -104,19 +131,49 @@ image{
     justify-content: center;
     justify-content: space-evenly;
 }
-.button1{
+.review{
+    display: none;
+    cursor: pointer;
+    margin: 0; 
+}
+.front1{
+    height: 300px;
+    width: 300px;
+    position: relative; 
+}
+.reviewback1{
+    display: none;
+     height: 300px;
+     width: 300px;
+     position: relative; 
+}
+.reviewBack2{
+    display: none;
+     height: 300px;
+     width: 300px;
+     position: relative; 
+}
+#button1{
+    border: 3px solid blue; 
+    padding: 10px;
     margin-top: 5em;
     position: relative;
+    cursor: pointer;
 }
 
-.button2{
+#button2{
+    border: 3px solid red; 
+    padding: 10px;
     margin-top: 5em;
     position: relative;
+    cursor: pointer;
     
 }
-.button3{
+#button3{
+    border: 3px solid green;
     margin-top: 5em;
     position: relative;
+    cursor: pointer;
 }
 #answer{
     color: rgb(64, 66, 68);
@@ -147,25 +204,16 @@ image{
 #question{
    color: rgb(64, 66, 68);
 }
-.review{
+#game-over-review{
+    color: rgb(64, 66, 68);
     display: none;
-    cursor: pointer;
-    margin: 0; 
+    font-size: 14px;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.front1{
-    height: 300px;
-    width: 300px;
-    position: relative; 
-}
-.reviewback1{
-    display: none;
-     height: 300px;
-     width: 300px;
-     position: relative; 
-}
-.reviewBack2{
-    display: none;
-     height: 300px;
-     width: 300px;
-     position: relative; 
+#tron{
+    font-size: 50px;
+    color: rgb(16, 16, 160);
 }

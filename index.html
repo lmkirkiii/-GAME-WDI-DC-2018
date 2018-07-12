@@ -6,17 +6,18 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
 </head>
 <body>
     <header>
-    <h1 class= "title"> Its Snapple Time!</h1>
+    <h1 class= "title"> <a  href ="" id="tron">SNAPPLE FLASH</a></h1>
     </header>
     <nav class="bar">
     <ul>
         <li><a href = "" class = "red">Game Theory</a></li>
         <li><a href = "" class = "orange">Game History</a></li>
         <li><a href = "" class = "yellow">Game Rules</a></li>
-        <li><a href = "" class = "green">About Developers</a></li>
+        <li><a href = "#footer" class = "green">About Developer</a></li>
 
 
     </ul>
@@ -26,25 +27,51 @@
         <br>
         <br>
         <div class="container">
+            <div class="theory">
+                <h1 class="theoryh1"> Theory Behind Snapple Game</h1>
+                <p class = "theoryp"> Since the dawn of time... or at least the dawn of snapple, humanity has been scowering the planent to master and learn the wisdomes that only can be found beneath a snapple cap. This Application was developed to usher in a future generation to the celebration of life through the eye of the Snapple storm.This is all the explanaiton one needs before embarking on the mental journey of a life time. </p>
+            </div>
+            <div class="history">
+                <h1 class="historyh1">History of Snapple Flash</h1>
+                <p class= "historyp">Snapple Flash began its development the day I was born November 8th 1992. I remember even in a pre-natal state how much I yearned to learn about the great facts in life as conveyed through a snapple cap.</p>
+            </div>
+            <div class="rules">
+                <h1 class= "rules1"> Game Rules </h1>
+                <ol> 
+                    <li>Click on snapple Cap!</li>
+                    <br>
+                    <li>Answer Questions!</li>
+                    <br>
+                    <li>If you were correct let us know!</li>
+                    <br>
+                    <li>If not please admit your wrong.</li>
+                    <br>
+                    <li>All wrong answers can be looked over using review.</li>
+                </ol>
+            </div>
+            <div class="developers">
+                <h1>Made By Me Lawrence Kirk!</h1>
+                <p>Hello World! I am lawrence and I am obsessed with snapple specifically Diet Snapple Peach Iced Tea or D-Spit for short. I want to keep keeping it real in this life so I stay woke on my snapple facts as much as possible. Hopefully you can now too. </p>
+            </div>
 
             <div class="card"> 
-                <image class="front" src="images/snapplecap_10932991 2.png">
-                <image class="back1" src="images/backcap.png">
+                <image class="front" src="images/snapplecap_10932991 2.png" alt="cap"></image>
+                <image class="back1" src="images/backcap.png" alt="cap">
                 <div class="imageAnswer">
-                        <image class="back" src="images/backcap.png">
+                        <image class="back" src="images/backcap.png" alt="cap">
                         <h3 id="answer"></h3>
                         <h3 id="game-over">Game Over! Please Drink More Snapple!</h3>
                 </div>
                 
             </div>
             <div class="review">
-                <image class="front1" src="images/snapple4.png">
-                <image class="reviewback1" src="images/backcap.png">
+                <image class="front1" src="images/snapple4.png" alt="cap">
+                <image class="reviewback1" src="images/backcap.png" alt="cap">
                             
                 <div class="imageAnswer">
-                <image class="reviewBack2" src="images/backcap.png">
+                <image class="reviewBack2" src="images/backcap.png" alt="cap">
                 <h3 id="answerReview"></h3>
-                 <h3 id="game-over">Game Over! Please <a href= "">Return to Game!<</a>></h3>
+                 <h3 id="game-over-review">Game Over! Please <a href= "">Return to Game!</a>></h3>
                 </div>
                     
             </div>   
@@ -54,13 +81,13 @@
                         <br>
                     </div>
             <div class="button-container">
-                    <button class="button1">
+                    <button id="button1">
                             I was Correct!
                     </button>
-                    <button class="button3">
+                    <button id="button3">
                             Review 
                     </button>
-                    <button class="button2">
+                    <button id="button2">
                             I was Wrong... 
                     </button>
             </div>
@@ -69,7 +96,7 @@
         <br>
     </main>
     <br>
-    <footer>
+    <footer id="footer">
         <ul>
             <li><a href = "" class = "red">Game Theory</a></li>
             <li><a href = "" class = "orange">Game History</a></li>
