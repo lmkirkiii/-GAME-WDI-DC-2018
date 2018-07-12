@@ -19,7 +19,6 @@ nav{
 footer{
     background-color: blue;
     color: white;
-    padding: 0;
     margin: 0;
     bottom: 0;
     position: absolute;
@@ -54,7 +53,7 @@ h2{
     text-align: center; 
 }
 image{
-    margin: 40px 8px;
+    margin: 100px;
  }
  main{
      min-height: 100%;
@@ -99,28 +98,38 @@ image{
  .card:hover{
     cursor: pointer;
  }
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+}
 .button1{
     margin-top: 5em;
-    display: none;
 }
 
 .button2{
     margin-top: 5em;
-    display: none;
+    
 }
 #answer{
+    color: rgb(64, 66, 68);
     font-size: 14px;
     position: absolute;
-    top: 33%;
+    top: 28.5%;
     left: 50%;
     transform: translate(-50%, -50%);
   
 }
 #game-over{
+    color: rgb(64, 66, 68);
     display: none;
     font-size: 14px;
     position: absolute;
-    top: 33%;
+    top: 32%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#question{
+   color: rgb(64, 66, 68);
 }
