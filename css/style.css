@@ -106,11 +106,17 @@ image{
 }
 .button1{
     margin-top: 5em;
+    position: relative;
 }
 
 .button2{
     margin-top: 5em;
+    position: relative;
     
+}
+.button3{
+    margin-top: 5em;
+    position: relative;
 }
 #answer{
     color: rgb(64, 66, 68);
@@ -120,6 +126,14 @@ image{
     left: 50%;
     transform: translate(-50%, -50%);
   
+}
+#answerReview{
+    color: rgb(64, 66, 68);
+    font-size: 14px;
+    position: absolute;
+    top: 28.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #game-over{
     color: rgb(64, 66, 68);
@@ -132,4 +146,26 @@ image{
 }
 #question{
    color: rgb(64, 66, 68);
+}
+.review{
+    display: none;
+    cursor: pointer;
+    margin: 0; 
+}
+.front1{
+    height: 300px;
+    width: 300px;
+    position: relative; 
+}
+.reviewback1{
+    display: none;
+     height: 300px;
+     width: 300px;
+     position: relative; 
+}
+.reviewBack2{
+    display: none;
+     height: 300px;
+     width: 300px;
+     position: relative; 
 }
