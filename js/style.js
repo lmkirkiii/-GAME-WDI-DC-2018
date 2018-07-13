@@ -3,7 +3,7 @@
 const image = document.querySelector('.front');
 var questionsArray= ['Do animals that Lay eggs have belly buttons?','Who was the first President born a US citizen?','Which country privately owns the most tigers world wide?','Do Tomatoes have more genes then humans?','What is the word to describe a flock of crows?','Can Mangoes get sun burned?','In cards which king is the only one without a mustache?','Is steel recyclable?']
 var changeColor = ['red','orange','yellow','lightblue','green','pink','purple','magenta','lightcoral'];
-var answersArray = ['No of course they dont!','Martin Van Buren!','The U S A!','Yes they do! Saucey!','3.5 miles!','A  murder!','Yup! Toasty!','The King of Hearts!','Yes it is 100% recyclable']
+var answersArray = ['No of course they dont!','Martin Van Buren!','The U S A!','Yes they do! Saucey!','A  murder!','Yup! Toasty!','The King of Hearts!','Yes it is 100% recyclable']
 var question = []
 var answer = [];
 var incorrectAnswerArray = [];
@@ -16,6 +16,9 @@ var inscoreBox = 'InCorrect Answers:'
 
 
 //Variables 
+
+    //Audio 
+    var audio = document.getElementById("myAudio")
     //Scoring variables 
     var incorrectScore = incorrectQuestionArray.length
     var correctScore = correctQuestion.length
@@ -294,5 +297,6 @@ changeBackGround.addEventListener('click',function(event){
        }
     }
 })
-
-
+//function playAudio(){
+  // audio.play();
+//}
