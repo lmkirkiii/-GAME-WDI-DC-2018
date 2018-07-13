@@ -1,5 +1,5 @@
 
- html body{
+ body{
     text-align: center;
 	text-decoration: none;
     margin: 0;
@@ -169,7 +169,6 @@ image{
      position: relative; 
 }
 .reviewBack2{
-    color: light
     display: none;
      height: 300px;
      width: 300px;

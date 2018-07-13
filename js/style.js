@@ -271,6 +271,7 @@ lightgreenbutton.addEventListener('click',function(event){
     card.style.display = 'none'
     review.style.display = 'none'
 })
+
 greenbutton.addEventListener('click',function(event){
     event.preventDefault();
     developers.style.display = 'block'
