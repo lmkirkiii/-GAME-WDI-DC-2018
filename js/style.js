@@ -1,9 +1,9 @@
 //Array Data 
 
 const image = document.querySelector('.front');
-var questionsArray= ['True or false do animals that Lay eggs have belly buttons?','Who was the first President born a US citizen?','Which country privately owns the most tigers world wide?','Do Tomatoes have more genes then humans?','How long does the largest mushroom in the world strech for?','What is the word to describe a flock of crows?']
+var questionsArray= ['Do animals that Lay eggs have belly buttons?','Who was the first President born a US citizen?','Which country privately owns the most tigers world wide?','Do Tomatoes have more genes then humans?','What is the word to describe a flock of crows?','Can Mangoes get sun burned?','In cards which king is the only one without a mustache?','Is steel recyclable?']
 var changeColor = ['red','orange','yellow','lightblue','green','pink','purple','magenta','lightcoral'];
-var answersArray = ['No of course they dont!','Martin Van Buren!','The U S A!','Yes they do! Saucey!','3.5 miles!','A  murder!']
+var answersArray = ['No of course they dont!','Martin Van Buren!','The U S A!','Yes they do! Saucey!','3.5 miles!','A  murder!','Yup! Toasty!','The King of Hearts!','Yes it is 100% recyclable']
 var question = []
 var answer = [];
 var incorrectAnswerArray = [];
@@ -31,6 +31,9 @@ var inscoreBox = 'InCorrect Answers:'
     var theorytext = document.querySelector('.theory')
     var rules = document.querySelector('.rules')
     var scoreContainer = document.querySelector('.scoreContainer')
+    var imageAnswer = document.querySelector('#answer1')
+    var imageAnswerReview = document.querySelector('#answer1Review')
+
 
     //Buttons
 
@@ -43,6 +46,7 @@ var inscoreBox = 'InCorrect Answers:'
     var correctBtn = document.querySelector('#button1')
     var incorrectBtn = document.querySelector('#button2')
     var reviewBtn = document.querySelector('#button3')
+    var EndButton = document.querySelector('#button4')
 
     //Smaller Classes and Hidden Objects
 
@@ -70,8 +74,13 @@ image.addEventListener("click",function(evt){
             document.querySelector('#scoreIncorrect').innerHTML = inscoreBox + incorrectQuestionArray.length
             card.style.display = 'none'
             gameOver.style.display = 'inline'
+            reviewBtn.style.display = 'inline'
         }
       }
+       EndButton.style.display = 'none'
+       imageAnswer.style.display = "inline"
+       correctBtn.style.display = 'none'
+       incorrectBtn.style.display = 'none'
        showQ.style.display = 'inline'
        image.style.display = 'none'
        backCap1.style.display = 'inline'
@@ -87,10 +96,17 @@ backCap1.addEventListener("click", function(event){
            if (answersArray.length === 0 ){
             document.querySelector('#scoreCorrect').innerHTML = scoreBox + correctQuestion.length
             document.querySelector('#scoreIncorrect').innerHTML = inscoreBox + incorrectAnswerArray.length
+
             card.style.display = 'none'
-            gameOver.style.display = 'inline' 
+            gameOver.style.display = 'inline'
+            reviewBtn.style.display = 'inline'
            }
        }
+       imageAnswer.style.display = "none"
+       EndButton.style.display = 'inline'
+       correctBtn.style.display = 'inline'
+       reviewBtn.style.display = 'none'
+       incorrectBtn.style.display = 'inline'
        showA.style.display = 'inline'
        hideQ.style.display = 'none'
        backCap.style.display = 'inline'
@@ -141,6 +157,7 @@ reviewBtn.addEventListener("click",function(){
 
 reviewFront.addEventListener("click",function(evt){
     for(i = 0; i < 1; i++){
+        question.pop();
         question.push(incorrectQuestionArray[i])
        
         if (incorrectQuestionArray.length === 0 ){
@@ -149,6 +166,7 @@ reviewFront.addEventListener("click",function(evt){
         }
         incorrectQuestionArray.shift();
     }
+       imageAnswerReview.style.display = "inline"
        showQ.style.display = 'inline'
        reviewFront.style.display = 'none'
        reviewBack.style.display = 'inline'
@@ -169,6 +187,7 @@ reviewBack.addEventListener("click", function(event){
         }
         incorrectAnswerArray.shift()
         }
+    imageAnswerReview.style.display = "none"
     reviewshow.style.display = 'inline'
     hideQ.style.display = 'none'
     reviewBack.style.display = 'none'
@@ -183,6 +202,19 @@ reviewBack2.addEventListener("click",function(evt){
     reviewFront.style.display = 'inline'
     reviewshow.style.display ='none'
     gameOver.style.display = 'none'
+})
+
+// End Button 
+EndButton.addEventListener('click',function(evt){
+    document.querySelector('#scoreCorrect').innerHTML = scoreBox + correctQuestion.length
+    document.querySelector('#scoreIncorrect').innerHTML = inscoreBox + incorrectQuestionArray.length
+    card.style.display = 'none'
+    correctBtn.style.display = 'none'
+    incorrectBtn.style.display = 'none'
+    EndButton.style.display = 'none'
+    gameOver.style.display = 'inline'
+    reviewBtn.style.display = 'inline'
+    
 })
 
 // Page content :

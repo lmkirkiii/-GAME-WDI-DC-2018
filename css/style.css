@@ -77,7 +77,9 @@ image{
      min-height: 100%;
      position: relative;
  }
-
+.underNav{
+    padding: 10%;
+}
  .theory{
      display: none;
      margin: 10%;
@@ -194,7 +196,16 @@ image{
     margin-top: 5em;
     position: relative;
     cursor: pointer;
+    display: none;
 }
+#button4{
+    border: 3px solid purple; 
+    padding: 10px;
+    margin-top: 5em;
+    position: relative;
+    cursor: pointer;
+}
+
 #answer{
     color: rgb(64, 66, 68);
     font-size: 14px;
@@ -204,11 +215,31 @@ image{
     transform: translate(-50%, -50%);
   
 }
+#answer1{
+    color: rgb(64, 66, 68);
+    font-size: 14px;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+}
+#answer1Review{
+    color: rgb(64, 66, 68);
+    font-size: 14px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+}
 #answerReview{
     color: rgb(64, 66, 68);
     font-size: 14px;
     position: absolute;
-    top: 32%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -241,12 +272,11 @@ image{
     color:  rgb(16, 16, 160);
 }
 #scoreCorrect{
-    float: ;
+  
     margin: 10px;
     padding: 0;
 }
 #scoreIncorrect{
-    float: ;
     margin: 0;
     padding: 0;
 }
