@@ -1,5 +1,5 @@
 
-html body{
+ html body{
     text-align: center;
 	text-decoration: none;
     margin: 0;
@@ -32,6 +32,7 @@ footer{
 }
 ol{
     list-style: none;
+    line-height: 2;
 }
 ul{
    list-style: none;
@@ -41,6 +42,9 @@ ul{
     flex-direction: row;
     justify-content: center;
     justify-content: space-evenly;
+}
+p{
+    line-height: 2;
 }
 
 a{
@@ -73,14 +77,22 @@ image{
      min-height: 100%;
      position: relative;
  }
+
  .theory{
-     display: none; 
+     display: none;
+     margin: 10%;
  }
  .rules{
      display: none;
+     margin: 10%;
+ }
+ .rules1{
+     text-align: center;
+     margin-left: 0.5%; 
  }
  .history{
      display: none;
+     margin: 10%;
  }
  .container{
      min-height: 100%;
@@ -91,6 +103,9 @@ image{
     background-color: red;
  }
  .orange:hover{
+    background-color: orange;
+ }
+ .change:hover{
     background-color: orange;
  }
  .yellow:hover{
@@ -112,6 +127,7 @@ image{
 }
 .developers{
     display: none;
+    margin: 10%;
 }
 .back1{
     display: none;
@@ -124,6 +140,9 @@ image{
  }
  .card:hover{
     cursor: pointer;
+ }
+ .rules1{
+
  }
 .button-container{
     display: flex;
@@ -142,12 +161,13 @@ image{
     position: relative; 
 }
 .reviewback1{
-    display: none;
+    display: none; 
      height: 300px;
      width: 300px;
      position: relative; 
 }
 .reviewBack2{
+    color: light
     display: none;
      height: 300px;
      width: 300px;
@@ -179,7 +199,7 @@ image{
     color: rgb(64, 66, 68);
     font-size: 14px;
     position: absolute;
-    top: 28.5%;
+    top: 27%;
     left: 50%;
     transform: translate(-50%, -50%);
   
@@ -188,16 +208,16 @@ image{
     color: rgb(64, 66, 68);
     font-size: 14px;
     position: absolute;
-    top: 28.5%;
+    top: 32%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 #game-over{
-    color: rgb(64, 66, 68);
+    color:  rgb(16, 16, 160);
     display: none;
-    font-size: 14px;
+    font-size: 20px;
     position: absolute;
-    top: 32%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -205,9 +225,9 @@ image{
    color: rgb(64, 66, 68);
 }
 #game-over-review{
-    color: rgb(64, 66, 68);
+    color: rgb(16, 16, 160);
     display: none;
-    font-size: 14px;
+    font-size: 20px;
     position: absolute;
     top: 32%;
     left: 50%;
@@ -216,4 +236,17 @@ image{
 #tron{
     font-size: 50px;
     color: rgb(16, 16, 160);
+}
+#bluer{
+    color:  rgb(16, 16, 160);
+}
+#scoreCorrect{
+    float: ;
+    margin: 10px;
+    padding: 0;
+}
+#scoreIncorrect{
+    float: ;
+    margin: 0;
+    padding: 0;
 }

@@ -1,45 +1,74 @@
+//Array Data 
+
 const image = document.querySelector('.front');
 var questionsArray= ['True or false do animals that Lay eggs have belly buttons?','Who was the first President born a US citizen?','Which country privately owns the most tigers world wide?','Do Tomatoes have more genes then humans?','How long does the largest mushroom in the world strech for?','What is the word to describe a flock of crows?']
-var question = []
+var changeColor = ['red','orange','yellow','lightblue','green','pink','purple','magenta','lightcoral'];
 var answersArray = ['No of course they dont!','Martin Van Buren!','The U S A!','Yes they do! Saucey!','3.5 miles!','A  murder!']
+var question = []
 var answer = [];
 var incorrectAnswerArray = [];
 var incorrectQuestionArray = [];
-var card = document.querySelector('.card')
-var hideQ = document.querySelector('#question')
-var showQ = document.querySelector('#question')
-var hideA = document.querySelector('#answer')
-var showA = document.querySelector('#answer')
-var reviewshow = document.querySelector('#answerReview')
-var backCap1 = document.querySelector('.back1')
-var backCap = document.querySelector('.back')
-var reviewGame = document.querySelector('#game-over-review')
-var gameOver = document.querySelector('#game-over')
-var correctBtn = document.querySelector('#button1')
-var incorrectBtn = document.querySelector('#button2')
-var reviewBtn = document.querySelector('#button3')
-var cardClass = document.querySelector('.card')
-var reviewClass = document.querySelector('.review')
-var historyClass = document.querySelector('.history')
-var reviewFront = document.querySelector('.front1')
-var reviewBack = document.querySelector('.reviewback1')
-var reviewBack2 = document.querySelector('.reviewBack2')
-var redbutton =document.querySelector('.red')
-var orangebutton = document.querySelector('.orange')
-var lightgreenbutton = document.querySelector('.yellow')
-var greenbutton = document.querySelector('.green')
-var developers = document.querySelector('.developers')
-var theorytext = document.querySelector('.theory')
-var rules = document.querySelector('.rules')
-var buttonsWhole = document.querySelector('.button-container')
+var correctQuestion = []; 
+var color = [];
+var scoreBox = 'Correct Answers: '
+var inscoreBox = 'InCorrect Answers:'
 
 
-//First half of Flash cards. 
+
+//Variables 
+    //Scoring variables 
+    var incorrectScore = incorrectQuestionArray.length
+    var correctScore = correctQuestion.length
+    
+
+    //Div Variables
+    var body = document.querySelector('body')
+    var card = document.querySelector('.card')
+    var developers = document.querySelector('.developers')
+    var reviewClass = document.querySelector('.review')
+    var historyClass = document.querySelector('.history')
+    var cardClass = document.querySelector('.card')
+    var theorytext = document.querySelector('.theory')
+    var rules = document.querySelector('.rules')
+    var scoreContainer = document.querySelector('.scoreContainer')
+
+    //Buttons
+
+    var redbutton =document.querySelector('.red')
+    var orangebutton = document.querySelector('.orange')
+    var lightgreenbutton = document.querySelector('.yellow')
+    var greenbutton = document.querySelector('.green')
+    var buttonsWhole = document.querySelector('.button-container')
+    var changeBackGround = document.querySelector('.change')
+    var correctBtn = document.querySelector('#button1')
+    var incorrectBtn = document.querySelector('#button2')
+    var reviewBtn = document.querySelector('#button3')
+
+    //Smaller Classes and Hidden Objects
+
+    var hideQ = document.querySelector('#question')
+    var showQ = document.querySelector('#question')
+    var hideA = document.querySelector('#answer')
+    var showA = document.querySelector('#answer')
+    var reviewshow = document.querySelector('#answerReview')
+    var backCap1 = document.querySelector('.back1')
+    var backCap = document.querySelector('.back')
+    var reviewGame = document.querySelector('#game-over-review')
+    var gameOver = document.querySelector('#game-over')
+    var reviewFront = document.querySelector('.front1')
+    var reviewBack = document.querySelector('.reviewback1')
+    var reviewBack2 = document.querySelector('.reviewBack2')
+
+
+//Regular Game of Snapple Flash 
 
 image.addEventListener("click",function(evt){
     for(i = 0; i < 1; i++){
         question.push(questionsArray[i])
         if (questionsArray.length === 0 ){
+            document.querySelector('#scoreCorrect').innerHTML = scoreBox + correctQuestion.length
+            document.querySelector('#scoreIncorrect').innerHTML = inscoreBox + incorrectQuestionArray.length
+            card.style.display = 'none'
             gameOver.style.display = 'inline'
         }
       }
@@ -56,6 +85,9 @@ backCap1.addEventListener("click", function(event){
        for(i = 0; i < 1; i++){
            answer.push(answersArray[i])
            if (answersArray.length === 0 ){
+            document.querySelector('#scoreCorrect').innerHTML = scoreBox + correctQuestion.length
+            document.querySelector('#scoreIncorrect').innerHTML = inscoreBox + incorrectAnswerArray.length
+            card.style.display = 'none'
             gameOver.style.display = 'inline' 
            }
        }
@@ -67,7 +99,9 @@ backCap1.addEventListener("click", function(event){
        document.querySelector('#answer').innerHTML = answer; 
    })
 
-correctBtn.addEventListener("click",function(evt){
+correctBtn.addEventListener("click",function(event){
+       event.preventDefault()
+       correctQuestion.push(question[0])
        answersArray.shift()
        questionsArray.shift();
        answer.pop()
@@ -89,14 +123,19 @@ incorrectBtn.addEventListener("click",function(evt){
     image.style.display = 'inline'
     hideA.style.display ='none'
     gameOver.style.display = 'none'
+    
 })
 
 // REVIEW FUNCTION ZONE  
 
 reviewBtn.addEventListener("click",function(){
-    cardClass.style.display = 'none';
     reviewClass.style.display = 'block';
-    buttonsWhole.style.display = 'none'
+    cardClass.style.display = 'none';
+    buttonsWhole.style.display = 'none';
+    gameOver.style.display = 'none' 
+    reviewBack2.style.display = 'none'
+    scoreContainer.style.display = 'none'
+
 
 })
 
@@ -105,6 +144,7 @@ reviewFront.addEventListener("click",function(evt){
         question.push(incorrectQuestionArray[i])
        
         if (incorrectQuestionArray.length === 0 ){
+            reviewClass.style.display = 'none'
             reviewGame.style.display = 'inline' 
         }
         incorrectQuestionArray.shift();
@@ -124,6 +164,7 @@ reviewBack.addEventListener("click", function(event){
     for(i = 0; i < 1; i++){
         answer.push(incorrectAnswerArray[i])
         if (incorrectAnswerArray.length === 0 ){
+            reviewClass.style.display = 'none'
             reviewGame.style.display = 'inline' 
         }
         incorrectAnswerArray.shift()
@@ -206,3 +247,20 @@ greenbutton.addEventListener('click',function(event){
     review.style.display = 'none'
     
 })
+
+//Change BackGround 
+
+changeBackGround.addEventListener('click',function(event){
+    event.preventDefault()
+    for(i = 0; i < 1; i++){
+       color.push(changeColor[i])
+       changeColor.shift()
+       body.style.backgroundColor = color[i]
+       color.pop()
+       if(changeColor.length === 0){
+           changeColor = ['red','orange','yellow','lightblue','green','pink','purple','magenta','lightcoral'];
+       }
+    }
+})
+
+
