@@ -225,6 +225,7 @@ EndButton.addEventListener('click',function(evt){
 redbutton.addEventListener('click',function(event){
     event.preventDefault();
     theorytext.style.display = 'block'
+    scoreContainer.style.display = 'none'
     developers.style.display = 'none'
     rules.style.display = 'none'
     historyClass.style.display = 'none'
@@ -232,12 +233,17 @@ redbutton.addEventListener('click',function(event){
     buttonsWhole.style.display = 'none'
     review.style.display = 'none'
     buttonsWhole.style.display = 'none'
+    gameOver.style.display = 'none'
+    reviewBtn.style.display = 'none'
 
 })
 
 orangebutton.addEventListener('click',function(event){
     event.preventDefault();
     historyClass.style.display = 'block'
+    scoreContainer.style.display = 'none'
+    gameOver.style.display = 'none'
+    reviewBtn.style.display = 'none'
     developers.style.display = 'none'
     rules.style.display = 'none'
     theorytext.style.display = 'none'
@@ -246,12 +252,16 @@ orangebutton.addEventListener('click',function(event){
     review.style.display = 'none'
     buttonsWhole.style.display = 'none'
     
+    
 
 })
 
 orangebutton.addEventListener('click',function(event){
     event.preventDefault();
     historyClass.style.display = 'block'
+    scoreContainer.style.display = 'none'
+    gameOver.style.display = 'none'
+    reviewBtn.style.display = 'none'
     developers.style.display = 'none'
     rules.style.display = 'none'
     theorytext.style.display = 'none'
@@ -264,6 +274,9 @@ orangebutton.addEventListener('click',function(event){
 lightgreenbutton.addEventListener('click',function(event){
     event.preventDefault();
     rules.style.display = 'block'
+    scoreContainer.style.display = 'none'
+    gameOver.style.display = 'none'
+    reviewBtn.style.display = 'none'
     developers.style.display = 'none'
     historyClass.style.display = 'none'
     theorytext.style.display = 'none'
@@ -275,6 +288,9 @@ lightgreenbutton.addEventListener('click',function(event){
 greenbutton.addEventListener('click',function(event){
     event.preventDefault();
     developers.style.display = 'block'
+    scoreContainer.style.display = 'none'
+    gameOver.style.display = 'none'
+    reviewBtn.style.display = 'none'
     rules.style.display = 'none'
     historyClass.style.display = 'none'
     theorytext.style.display = 'none'
@@ -298,6 +314,6 @@ changeBackGround.addEventListener('click',function(event){
        }
     }
 })
-//function playAudio(){
-  // audio.play();
-//}
+function playAudio(){
+  audio.play();
+}
