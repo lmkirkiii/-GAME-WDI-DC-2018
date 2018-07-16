@@ -18,13 +18,17 @@ var inscoreBox = 'InCorrect Answers:'
 //Variables 
 
     //Audio 
+
     var audio = document.getElementById("myAudio")
+    
     //Scoring variables 
+
     var incorrectScore = incorrectQuestionArray.length
     var correctScore = correctQuestion.length
     
 
     //Div Variables
+
     var body = document.querySelector('body')
     var card = document.querySelector('.card')
     var developers = document.querySelector('.developers')
@@ -225,6 +229,7 @@ EndButton.addEventListener('click',function(evt){
 redbutton.addEventListener('click',function(event){
     event.preventDefault();
     theorytext.style.display = 'block'
+    reviewClass.style.display = 'none'
     scoreContainer.style.display = 'none'
     developers.style.display = 'none'
     rules.style.display = 'none'
@@ -241,6 +246,7 @@ redbutton.addEventListener('click',function(event){
 orangebutton.addEventListener('click',function(event){
     event.preventDefault();
     historyClass.style.display = 'block'
+    reviewClass.style.display = 'none'
     scoreContainer.style.display = 'none'
     gameOver.style.display = 'none'
     reviewBtn.style.display = 'none'
@@ -259,6 +265,7 @@ orangebutton.addEventListener('click',function(event){
 orangebutton.addEventListener('click',function(event){
     event.preventDefault();
     historyClass.style.display = 'block'
+    reviewClass.style.display = 'none'
     scoreContainer.style.display = 'none'
     gameOver.style.display = 'none'
     reviewBtn.style.display = 'none'
@@ -274,6 +281,7 @@ orangebutton.addEventListener('click',function(event){
 lightgreenbutton.addEventListener('click',function(event){
     event.preventDefault();
     rules.style.display = 'block'
+    reviewClass.style.display = 'none'
     scoreContainer.style.display = 'none'
     gameOver.style.display = 'none'
     reviewBtn.style.display = 'none'
@@ -288,6 +296,7 @@ lightgreenbutton.addEventListener('click',function(event){
 greenbutton.addEventListener('click',function(event){
     event.preventDefault();
     developers.style.display = 'block'
+    reviewClass.style.display = 'none'
     scoreContainer.style.display = 'none'
     gameOver.style.display = 'none'
     reviewBtn.style.display = 'none'
